@@ -49,6 +49,17 @@ export const routes: Routes = [
     },
     
     {
+      path: 'dashboard',
+      canActivate: [authGuard],
+      loadChildren: () =>
+        loadRemoteModule({
+          type: 'module',
+          remoteEntry: 'http://localhost:4205/remoteEntry.js',
+          exposedModule: './Routes'
+        }).then(m => m.routes)
+    },
+    
+    {
       path: '',
       redirectTo: '/auth',
       pathMatch: 'full'

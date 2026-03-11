@@ -7,7 +7,7 @@ export const reverseAuthGuard: CanActivateFn = () => {
   const isLoggedIn = localStorage.getItem('token');
 
   if (isLoggedIn) {
-    router.navigate(['/todo']);
+    router.navigate(['/dashboard']);
     return false;
   }
 

@@ -29,10 +29,10 @@ export class Login {
   login() {
     console.log(this.email, this.password);
     localStorage.setItem('token', 'logged-in');
-    // Navigate to todo page - Router will work since we're loaded within the shell
-    this.router.navigate(['/todo']).catch(() => {
+    // Navigate to dashboard page - Router will work since we're loaded within the shell
+    this.router.navigate(['/dashboard']).catch(() => {
       // Fallback to window.location if Router navigation fails
-      window.location.href = '/todo';
+      window.location.href = '/dashboard';
     });
   }
 

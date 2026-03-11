@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Angular Material Theme */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* Material Icons */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Ensure Material Menu is visible */
+.mat-mdc-menu-panel {
+  background-color: white !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.mat-mdc-menu-item {
+  color: rgba(0, 0, 0, 0.87) !important;
+  
+  .mat-icon {
+    color: rgba(0, 0, 0, 0.54) !important;
+  }
+  
+  span {
+    color: rgba(0, 0, 0, 0.87) !important;
+  }
+}
+
+.mat-mdc-divider {
+  border-top-color: rgba(0, 0, 0, 0.12) !important;
+}

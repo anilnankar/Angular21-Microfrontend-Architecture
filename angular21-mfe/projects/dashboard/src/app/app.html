@@ -1,0 +1,90 @@
+<div class="dashboard-container">
+  <!-- Navigation Bar -->
+  <mat-toolbar color="primary" class="navbar">
+    <span class="navbar-title">Dashboard</span>
+    <span class="spacer"></span>
+    
+    <!-- User Profile Menu -->
+    <button mat-icon-button [matMenuTriggerFor]="profileMenu" class="profile-button">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    
+    <mat-menu #profileMenu="matMenu">
+      <div class="profile-menu-header">
+        <mat-icon>account_circle</mat-icon>
+        <div class="profile-info">
+          <div class="profile-name">{{ userName() }}</div>
+          <div class="profile-email">user@example.com</div>
+        </div>
+      </div>
+      <mat-divider></mat-divider>
+      <button mat-menu-item (click)="navigateToProfile()">
+        <mat-icon>person</mat-icon>
+        <span>View Profile</span>
+      </button>
+      <button mat-menu-item (click)="editProfile()">
+        <mat-icon>edit</mat-icon>
+        <span>Edit Profile</span>
+      </button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item (click)="logout()">
+        <mat-icon>logout</mat-icon>
+        <span>Logout</span>
+      </button>
+    </mat-menu>
+  </mat-toolbar>
+
+  <!-- Main Content -->
+  <div class="dashboard-content">
+    @if (showTiles()) {
+      <!-- Dashboard Home View -->
+      <div class="dashboard-home">
+        <h1 class="welcome-title">Welcome, {{ userName() }}!</h1>
+        <p class="welcome-subtitle">Select a module to get started</p>
+        
+        <!-- Tiles Grid -->
+        <div class="tiles-grid">
+          <!-- Todo Tile -->
+          <mat-card class="tile-card" (click)="navigateToTodo()">
+            <mat-card-header>
+              <mat-card-title>
+                <mat-icon class="tile-icon">checklist</mat-icon>
+                Todo
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>Manage your tasks and to-do items efficiently</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button color="primary">Open</button>
+            </mat-card-actions>
+          </mat-card>
+
+          <!-- Analytics Tile -->
+          <mat-card class="tile-card" (click)="navigateToAnalytics()">
+            <mat-card-header>
+              <mat-card-title>
+                <mat-icon class="tile-icon">analytics</mat-icon>
+                Analytics
+              </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+              <p>View detailed analytics and insights</p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button color="primary">Open</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+    } @else {
+      <!-- Child Route Content -->
+      <div class="child-route-content">
+        <button mat-icon-button (click)="navigateToDashboard()" class="back-button">
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+        <router-outlet></router-outlet>
+      </div>
+    }
+  </div>
+</div>

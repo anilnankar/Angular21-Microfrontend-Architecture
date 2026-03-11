@@ -59,6 +59,12 @@
     },
     {
       "path": "./projects/style-components/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/dashboard/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/dashboard/tsconfig.spec.json"
     }
   ]
 }

@@ -7,7 +7,7 @@ module.exports = withModuleFederationPlugin({
   name: 'todo',
 
   exposes: {
-    './Component': './projects/todo/src/app/app.ts',
+    './Routes': './projects/todo/src/app/app.routes.ts',
   },
 
   shared: {

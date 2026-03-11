@@ -7,7 +7,7 @@ module.exports = withModuleFederationPlugin({
   name: 'analytics',
 
   exposes: {
-    './Component': './projects/analytics/src/app/app.ts',
+    './Routes': './projects/analytics/src/app/app.routes.ts',
   },
 
   shared: {

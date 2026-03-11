@@ -1,0 +1,64 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "paths": {
+      "style-components": ["./dist/style-components"]
+    },
+    "module": "preserve"
+  },
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./projects/shell/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/shell/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/authentication/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/authentication/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/todo/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/todo/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/user/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/user/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/analytics/tsconfig.app.json"
+    },
+    {
+      "path": "./projects/analytics/tsconfig.spec.json"
+    },
+    {
+      "path": "./projects/style-components/tsconfig.lib.json"
+    },
+    {
+      "path": "./projects/style-components/tsconfig.spec.json"
+    }
+  ]
+}
